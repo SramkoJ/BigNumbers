@@ -1,11 +1,24 @@
 public class Main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         NumberGenerator generator = new NumberGenerator();
         Calculator calculator = new Calculator();
         BigNumber[] numbers = new BigNumber[50];
+
+        // Generating numbers with increasing digits count
         for (int i = 0; i < 50; i++) {
             numbers[i] = generator.generate(i + 1);
-            System.out.println("Number " + (i + 1) + ": " +  numbers[i]);
+            System.out.println("Generated Number " + (i + 1) + ": " + numbers[i]);
         }
+
+        // Array for the new number
+        BigNumber totalSum = new BigNumber(new int[]{0}, false);
+
+        // Gradually add each number from the array to the total sum
+        for (int i = 0; i < numbers.length; i++) {
+            totalSum = calculator.calculateSum(totalSum, numbers[i]);
+        }
+
+        // Final number
+        System.out.println(totalSum.toString());
     }
 }
