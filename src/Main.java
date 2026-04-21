@@ -14,8 +14,8 @@ public class Main {
         BigNumber totalSum = new BigNumber(new int[]{0}, false);
 
         // Gradually add each number from the array to the total sum
-        for (int i = 0; i < numbers.length; i++) {
-            totalSum = calculator.calculateSum(totalSum, numbers[i]);
+        for (BigNumber number : numbers) {
+            totalSum = calculator.calculateSum(totalSum, number);
         }
 
         // Final number
