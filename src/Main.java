@@ -7,7 +7,7 @@ public class Main {
         // Generating numbers with increasing digits count
         for (int i = 0; i < 50; i++) {
           numbers[i] = generator.generate(i + 1);
-        //  System.out.println("Generated Number " + (i + 1) + ": " + numbers[i]);
+          //System.out.println("Generated Number " + (i + 1) + ": " + numbers[i]);
          }
 
         // Array for the new number

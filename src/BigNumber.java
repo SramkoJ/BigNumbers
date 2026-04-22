@@ -17,9 +17,12 @@ public class BigNumber {
 
     @Override
     public String toString() {
+        // StringBuilder for easy printing
         if (digits == null || digits.length == 0) return "0";
         StringBuilder sb = new StringBuilder();
+        // Printing sign
         if (isNegative) sb.append("-");
+        // Printing rest of the digits
         for (int i = digits.length - 1; i >= 0; i--) {
             sb.append(digits[i]);
         }

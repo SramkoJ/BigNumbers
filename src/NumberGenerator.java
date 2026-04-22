@@ -3,9 +3,6 @@ import java.util.Random;
 public class NumberGenerator {
     private final Random random = new Random();
 
-    /**
-     * Generates a BigNumber with a given number of digits.
-     */
     public BigNumber generate(int length) {
         if (length < 1) throw new IllegalArgumentException("Length must be > 0");
         int[] digits = new int[length];
